@@ -7,6 +7,11 @@ salaries = {
     1: {"name": "Arun", "salary": 50000},
     2: {"name": "Bala", "salary": 60000},
     3: {"name": "Sriram", "salary": 30000},
+    4: {"name": "Samp", "salary": 40000},
+    5: {"name": "Shiv", "salary": 70000},
+    6: {"name": "Jack", "salary": 10000},
+    7: {"name": "Deva", "salary": 20000}
+
 }
 
 # GET all employees
