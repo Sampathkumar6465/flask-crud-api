@@ -27,7 +27,7 @@ def get_employee(id):
         return jsonify(employee)
     return jsonify({"error": "Employee not found"}), 404
 
-# POST - add a new employee
+# POST add a new employee
 @app.route('/employees', methods=['POST'])
 def add_employee():
     data = request.get_json()
@@ -35,7 +35,7 @@ def add_employee():
     salaries[new_id] = data
     return jsonify({"id": new_id, "employee": data})
 
-# PUT - update salary or name
+# PUT update salary or name
 @app.route('/employees/<int:id>', methods=['PUT'])
 def update_employee(id):
     if id in salaries:
@@ -43,7 +43,7 @@ def update_employee(id):
         return jsonify(salaries[id])
     return jsonify({"error": "Employee not found"}), 404
 
-# DELETE - remove an employee
+# DELETE remove an employee
 @app.route('/employees/<int:id>', methods=['DELETE'])
 def delete_employee(id):
     if id in salaries:
